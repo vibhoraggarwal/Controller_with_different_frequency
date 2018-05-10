@@ -1,0 +1,10 @@
+generate_var;
+plottime= 126:1:251;
+plot(time(plottime),y_ref(plottime),'--');
+hold on;
+plot(time(plottime),y_meas_tor(plottime));
+plot(time(plottime),y_meas_vel(plottime),'-o');
+yyaxis right;
+plot(time(plottime),y_meas_pos(plottime)*180/pi);
+yyaxis left;
+legend('Position reference','Measured Torque','Measured Velocity','Measured Position');
